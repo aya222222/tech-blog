@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://literate-tribble-9x49w779gqv2vrq-1313.app.github.dev/"
+baseurl = "https://aya222222.github.io/tech-blog"
 languageCode = "en-us"
 paginate = 5
 title = "baby steps coding journey"
