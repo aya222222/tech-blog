@@ -1,19 +1,32 @@
 ---
-title: How to delete all index from Elasticsearch
-description: "Wildcard expressions or all indices are not allowed"
-date: 2024-04-30 00:00:00+0000
-math: true
+title: "How To Delete All Index of Elasticsearch"
+description: How to Solve An Error "Wildcard expressions or all indices are not allowed"
+date: 2024-05-02T01:35:05Z
+math: 
+comments: true
+draft: false
+tags: 
+    - elasticsearch
+
+categories:
+    - debugging
+    
 ---
+
+
+<br><br>
 
 I wanted to delete all index from elasticsearch.
 
 So I did:
-```curl -XDELETE "http://localhost:9200/_all"
+```
+curl -XDELETE "http://localhost:9200/_all"
 ```
 
 But got an error: 
 ```
-{"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Wildcard expressions or all indices are not allowed"}],"type":"illegal_argument_exception","reason":"Wildcard expressions or all indices are not allowed"},"status":400}
+{"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Wildcard expressions or all indices are not allowed"}],
+"type":"illegal_argument_exception","reason":"Wildcard expressions or all indices are not allowed"},"status":400}
 ```
 
 So next, I did: 
@@ -21,7 +34,7 @@ So next, I did:
 curl -X PUT -u elastic:elastic "http://localhost:9200/_cluster/settings?pretty" -H "Content-Type: application/json" -d "{\"persistent\": {\"action.destructive_requires_name\": false}}"
 ```
 
-THen it returns:
+Then it returns:
 ```
 {
 
