@@ -1,7 +1,7 @@
 ---
 title: "How To Delete All Index of Elasticsearch"
 description: How to Solve An Error "Wildcard expressions or all indices are not allowed"
-date: 2024-05-01
+date: 2024-05-01 00:00:00+0000
 math: 
 comments: true
 draft: false
