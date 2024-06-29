@@ -16,7 +16,7 @@ categories:
 
 <br><br>
 
-When I tried to [VoTT](https://github.com/microsoft/VoTT) using snap on Linux, I got an error: 
+When I tried to install [VoTT](https://github.com/microsoft/VoTT) using snap on Linux, I got an error: 
 ```
 error: cannot find signatures with metadata for snap "vott-2.2.0-linux.snap"
 ```
