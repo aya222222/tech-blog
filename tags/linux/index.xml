@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on baby steps coding journey</title><link>https://aya222222.github.io/tags/linux/</link><description>Recent content in Linux on baby steps coding journey</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 28 Jun 2024 02:04:19 +0000</lastBuildDate><atom:link href="https://aya222222.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>How To Solve An Error on Linux: 'cannot find signatures with metadata for snap'</title><link>https://aya222222.github.io/p/how-to-solve-an-error-on-linux-cannot-find-signatures-with-metadata-for-snap/</link><pubDate>Fri, 28 Jun 2024 02:04:19 +0000</pubDate><guid>https://aya222222.github.io/p/how-to-solve-an-error-on-linux-cannot-find-signatures-with-metadata-for-snap/</guid><description>&lt;p>&lt;br>&lt;br>&lt;/p>
+&lt;p>When I tried to install &lt;a class="link" href="https://github.com/microsoft/VoTT" target="_blank" rel="noopener"
+>VoTT&lt;/a> using snap on Linux, I got an error:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">error: cannot find signatures with metadata for snap &amp;#34;vott-2.2.0-linux.snap&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>What do you mean &amp;ldquo;signature&amp;rdquo;?　　
+The cause of this error is because &lt;a class="link" href="https://askubuntu.com/questions/822765/snap-install-failure-error-cannot-find-signatures-with-metadata-for-snap" target="_blank" rel="noopener"
+>&amp;ldquo;Since I&amp;rsquo;m installing a local snap, I have no assertions for it, and snap doesn&amp;rsquo;t trust it&amp;rdquo;&lt;/a>.&lt;/p>
+&lt;p>OK, not helpful error at all.　　
+Anyway, the solution is adding &lt;code>--dangerous&lt;/code> flag.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">snap install --dangerous vott-2.2.0-linux.snap
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>it woked!　　&lt;/p></description></item></channel></rss>
